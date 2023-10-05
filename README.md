@@ -317,3 +317,34 @@ Disassembly of section .text:
  24c:	00008067          	ret
 
 ```
+# Instructions used in the Assembly code:
+
+```
+Number of different instructions: 16
+List of unique instructions:
+mul
+lw
+add
+ret
+nop
+sll
+beqz
+j
+or
+sw
+blt
+and
+lui
+auipc
+li
+jalr
+
+```
+# Acknowledgement
+
+1. Kunal Ghosh, VSD Corp. Pvt. Ltd.
+2. Skywater Foundry
+3. Chatgpt
+4. Shant Rakshit, Colleague, IIITB.
+5. Emil Jayanth Lal, Colleague, IIITB.
+   
