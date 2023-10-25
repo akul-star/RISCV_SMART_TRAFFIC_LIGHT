@@ -353,8 +353,35 @@ addi
 slli
 j
 
-
 ```
+# SPIKE Testing
+We will be using "Spike" which is a RISC-V simulator. An open-source instruction-set simulator (ISS) for the RISC-V architecture. The C-code will be first using RISC-64 tool chain and then simulated for different scenario's according to the application using SPIKE simulator.
+
+CASE-1
+======
+- The project is about a smart traffic light system which will ring the buzzer whenever a vehicle will break the traffic light. Case-1 is when the laser(input) will give 1 as input, which means vehicle is breaking the traffic light.
+
+![laser1](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/bfd27dcb-f4b8-44af-9564-7233fa3bbd40)
+
+
+- When red light is ON and the vehicle breaks the light, the buzzer is getting turned ON.
+- When red & yellow light is ON and the vehicle breaks the light, the buzzer is getting turned ON.
+- When yellow light is ON and the vehicle breaks the light, the buzzer is getting turned ON.
+- When green light is ON the buzzer will be OFF.
+
+CASE-2
+======
+Case-1 is when the laser(input) will give 1 as input, which means vehicle is breaking the traffic light.
+
+![laser_0](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/ff99bc09-4821-4da8-ac3a-4940df6395da)
+
+- When red light is ON and no the vehicle breaks the light, the buzzer is OFF.
+- When red & yellow light is NO and no vehicle breaks the light, the buzzer is OFF.
+- When yellow light is ON and NO vehicle breaks the light, the buzzer is OFF.
+- When green light is ON the buzzer will be OFF.
+
+
+
 # Acknowledgement
 
 1. Kunal Ghosh, VSD Corp. Pvt. Ltd.
