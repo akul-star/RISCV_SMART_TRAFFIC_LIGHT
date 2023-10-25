@@ -55,7 +55,7 @@ while(1)
     	: "x30"
     	);
   
-   red=1, yellow=0, green=0, laser=0;
+   red=1, yellow=0, green=0;
   // printf("RED light ON\n\t");
   
   if(laser){
@@ -86,7 +86,7 @@ while(1)
    
 //    } 
        
-  red=1, yellow=1, green=0, laser=0;
+  red=1, yellow=1, green=0;
   //printf("RED & YELLOW ON\n\t");
   
   if(laser) {
@@ -118,7 +118,7 @@ while(1)
 //    }
       
       
-    red=0, yellow=0, green=1, laser=0;
+    red=0, yellow=0, green=1;
     //     printf("GREEN light ON\n\t");
   if(laser)
   {
@@ -195,6 +195,7 @@ while(1)
 return 0;
 }
 }
+
 ```
 
 # Assembly Code Conversion
