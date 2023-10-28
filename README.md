@@ -345,20 +345,21 @@ Disassembly of section .text:
 # Instructions used in the Assembly code:
 
 ```
+instuction_counter.py
 Number of different instructions: 12
 List of unique instructions:
-sw
 and
+addi
+li
+sw
+ret
+slli
+or
+lw
 j
 mv
-li
 andi
 beqz
-or
-ret
-addi
-lw
-slli
 
 ```
 # SPIKE Testing
