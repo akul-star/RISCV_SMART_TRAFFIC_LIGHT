@@ -372,7 +372,7 @@ beqz
 # SPIKE Testing
 We will be using "Spike" which is a RISC-V simulator. An open-source instruction-set simulator (ISS) for the RISC-V architecture. The C-code will be first using RISC-64 tool chain and then simulated for different scenario's according to the application using SPIKE simulator.
 
-CASE-1
+Case-1
 ======
 - The project is about a smart traffic light system which will ring the buzzer whenever a vehicle will break the traffic light. Case-1 is when the laser(input) will give 1 as input, which means vehicle is breaking the traffic light.
 
@@ -384,7 +384,7 @@ CASE-1
 - When yellow light is ON and the vehicle breaks the light, the buzzer is getting turned ON.
 - When green light is ON the buzzer will be OFF.
 
-CASE-2
+Case-2
 ======
 Case-1 is when the laser(input) will give 1 as input, which means vehicle is breaking the traffic light.
 
@@ -394,6 +394,28 @@ Case-1 is when the laser(input) will give 1 as input, which means vehicle is bre
 - When red & yellow light is NO and no vehicle breaks the light, the buzzer is OFF.
 - When yellow light is ON and NO vehicle breaks the light, the buzzer is OFF.
 - When green light is ON the buzzer will be OFF.
+
+# Functionality Simulation
+
+In Smart Traffic Light project, the input is LASER sensor which is always turned ON and monitoring if the vehicles are breaking the signal or not. The different cases for which laser will keep monitoring the the vehicles are,
+
+1. RED LIGHT = ON
+2. RED LIGHT = ON, YELLOW LIGHT = ON
+3. YELLOW LIGHT = ON
+4. GREEN LIGHT = ON (Laser will be ON the buzzer won't start)
+
+![32regiter](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/e5133015-a404-4438-b957-4794bb8d2957)
+
+
+- LASER (I/P) = 1
+  ================
+
+![GTK_lase1](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/5959b171-3b78-4cff-8a5f-f58cde300dec)
+
+- LASER (I/P) = 0
+  ================
+
+![GTK_laser0](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/6c2eadd5-9f52-41fc-83af-d25945558452)
 
 
 
