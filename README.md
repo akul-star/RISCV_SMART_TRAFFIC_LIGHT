@@ -10,10 +10,11 @@ The program continuously cycles through a traffic light sequence: red, red/yello
 # BLOCK DIAGRAM:
 <img width="490" alt="image" src="https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/57cf8a24-52f5-4a19-adc8-553c6bd2d490">
 
-# TRUTH TABLE:
+# Truth Table:
 
-| RED LED | YELLOW LED | GREEN LED | BUZZER | LASER |
-  -------   ----------   ---------   ------   ------
+| RED LED (I/P) | YELLOW LED (I/P) | GREEN LED (I/P) | BUZZER (I/P) | LASER (O/P) |
+| --------------|----------------- | --------------- | ------------ | ----------  |
+|               |                  |                 |              |             |
 
 # Testing
 
