@@ -14,7 +14,12 @@ The program continuously cycles through a traffic light sequence: red, red/yello
 
 | RED LED (I/P) | YELLOW LED (I/P) | GREEN LED (I/P) | BUZZER (I/P) | LASER (O/P) |
 | --------------|----------------- | --------------- | ------------ | ----------  |
-|               |                  |                 |              |             |
+|       0       |        0         |        0        |      0       |      1      |
+|       1       |        0         |        0        |      0       |      1      |
+|       1       |        0         |        0        |      1       |      0      |
+|       1       |        1         |        0        |      0       |      1      |
+|       1       |        1         |        0        |      1       |      0      |
+|       0       |        0         |        1        |      X       |      1      |
 
 # Testing
 
