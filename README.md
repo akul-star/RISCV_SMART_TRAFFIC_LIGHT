@@ -495,6 +495,53 @@ In Smart Traffic Light project, the input is LASER sensor which is always turned
 
 ![GTK_laser0](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/6c2eadd5-9f52-41fc-83af-d25945558452)
 
+# Synthesis
+
+Synthesis is the crucial process of translating a high-level RTL (Register-Transfer Level) design into a gate-level netlist that adheres to the designer's specifications. In simpler terms, it's the transformation of a conceptual design into a concrete chip design consisting of logic gates.
+
+The synthesis process unfolds through several stages:
+
+   - Initial transformation of RTL into a representation composed of basic logic gates.
+   - Matching these basic gates to specific technology-dependent logic gates found in available libraries.
+   - Refining and enhancing the mapped netlist while ensuring that it complies with the designer's constraints.
+
+# Gate Level Simulation
+
+Gate-Level Simulation (GLS) involves simulating a design by using a test bench with a netlist generated from the synthesis process as the Design Under Test (DUT). Since the netlist retains the same logical functionality as the original RTL code, the same test bench can be applied for verification purposes. This step serves the dual purpose of confirming the logical accuracy of the design after synthesis and ensuring that the design meets its specified timing requirements.
+
+To achieve this, we can utilize the following commands in Yosys to convert RTL code to a netlist:
+
+```
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+read_verilog processor.v 
+synth -top wrapper
+dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+write_verilog synth_processor_test.v
+
+```
+
+
+
+  - Begin by transforming the RTL code into an equivalent gate-level netlist.
+  - Then, conduct the simulation with the generated netlist to verify its logical correctness and meet timing constraints.
+
+These commands facilitate the process of confirming that the synthesized design behaves as intended and satisfies the required timing constraints.
+
+Folllowing are the commands to run the GLS simulation:
+
+```
+iverilog -o test synth_processor_test.v testbench.v sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v
+```
+
+When examining the gtkwave output for the netlist, it should ideally correspond to the output waveforms for the RTL design file. This alignment occurs because both the netlist and the original design code share the same set of input and output signals. Therefore, you can conveniently utilize the same testbench for simulation and directly compare the waveforms.
+
+In essence, this allows you to ensure that the synthesized netlist faithfully reproduces the behavior of the RTL design, and any discrepancies between the waveforms can signal potential issues or differences between the two representations.
+
+---
+![Screenshot from 2023-11-02 21-18-59](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/9bd203aa-2cba-4783-930a-de302246600d)
+
+
 
 
 # Acknowledgement
