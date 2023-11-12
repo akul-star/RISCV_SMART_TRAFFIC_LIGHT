@@ -548,6 +548,7 @@ In essence, this allows you to ensure that the synthesized netlist faithfully re
 
 ![GLS_laser0](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/18520e25-d37e-481e-84ba-1143a56a777b)
 
+# OPENLANE:
 
 
 
