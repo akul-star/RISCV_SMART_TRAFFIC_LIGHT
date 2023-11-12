@@ -538,8 +538,11 @@ When examining the gtkwave output for the netlist, it should ideally correspond 
 
 In essence, this allows you to ensure that the synthesized netlist faithfully reproduces the behavior of the RTL design, and any discrepancies between the waveforms can signal potential issues or differences between the two representations.
 
+# LASER (i/p) = 1
 ---
 ![Screenshot from 2023-11-02 21-18-59](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/9bd203aa-2cba-4783-930a-de302246600d)
+
+# LASER (i/p) = 0
 
 
 
