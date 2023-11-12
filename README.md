@@ -540,12 +540,14 @@ In essence, this allows you to ensure that the synthesized netlist faithfully re
 
 # LASER (i/p) = 1
 
-![GLS_laser1](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/96471809-4dd2-4b58-8d4b-41dfb52da604)
+![GLS_laser1](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/2a856c7b-846f-483f-a2d9-3e6a5ce3304a)
 
 
 # LASER (i/p) = 0
 ---
-![Screenshot from 2023-11-02 21-18-59](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/9bd203aa-2cba-4783-930a-de302246600d)
+
+![GLS_laser0](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/18520e25-d37e-481e-84ba-1143a56a777b)
+
 
 
 
