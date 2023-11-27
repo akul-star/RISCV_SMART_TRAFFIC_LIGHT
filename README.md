@@ -550,6 +550,50 @@ In essence, this allows you to ensure that the synthesized netlist faithfully re
 
 # OPENLANE:
 
+OpenLane is used as an open-source digital ASIC design pipeline that offers an automated and all-inclusive integrated circuit design solution. Its fully automated design cycle, which automates processes like synthesis, placement, routing, and optimization, is its main advantage. This helps to drastically cut down on the time and effort needed for complex ASIC design. The instrument is used in both research and teaching contexts and is made to be widely accessible, reducing obstacles for engineers and researchers. OpenLane is a useful platform for experimenting because of its flexibility for customization and integration with other open-source EDA tools. 
+
+---
+![Openlane_ASICflow](https://github.com/akul-star/Advanced-Physical-Design/assets/75561390/4a23a0b6-776c-42e0-ae25-eab6d2638929)
+
+**Invoking OpenLANE**
+
+```
+cd OpenLane
+make mount
+```
+
+Inside the openlane container:
+```
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+run_synthesis
+```
+
+Synthesis:
+===========
+
+In the RTL to GDS2 flow, synthesis is a crucial step where RTL (Register Transfer Level) code is transformed into a gate-level netlist. This process involves mapping RTL constructs to standard cell libraries, optimizing the design for area, power, and timing, handling clock domains, and applying timing constraints. Static Timing Analysis (STA) is then performed to ensure that the design meets timing requirements. Once synthesis is complete, the synthesized design serves as the foundation for subsequent steps in the flow, including physical design, placement, routing, and ultimately the generation of GDS2 files for fabrication. This synthesis stage plays a pivotal role in achieving a balance between design functionality and performance while preparing the design for manufacturing.
+
+    A. **Liberty View (Liberty Format):**
+        Purpose: Liberty view is used primarily for static timing analysis (STA) during the synthesis process. It provides information about the timing characteristics of standard cells from the cell library, such as setup times, hold                        times, rise/fall times, and capacitance values.
+        Contents: It includes timing constraints, delay information, and other timing-related data for the cells in the standard cell library.
+        Format: Typically written in a standard format called Liberty (.lib) format, which can be read by synthesis tools and STA tools.
+
+    B. **HDL Behavioral View:**
+        Purpose: The HDL (Hardware Description Language) Behavioral View represents the high-level description of the digital design in RTL (Register Transfer Level) or a higher abstraction level. It's the original RTL code created by                        designers.
+        Contents: It contains behavioral descriptions of the logic functions, data paths, control structures, and the intended functionality of the design.
+        Format: The format depends on the hardware description language used, such as VHDL or Verilog.
+
+    C. **SPICE View (Simulation View):**
+        Purpose: SPICE (Simulation Program with Integrated Circuit Emphasis) View is used for detailed transistor-level simulation. It provides a transistor-level representation of the design and is essential for accurate circuit-level                       simulations.
+        Contents: SPICE View includes transistor-level models, parasitic elements, and detailed information about how the gates and interconnections in the design are implemented at the transistor level.
+        Format: Typically written in a SPICE-compatible format (e.g., SPICE netlists) that can be used by circuit simulators for accurate transistor-level simulations.
+
+To synthesize the code run the following command:
+```
+run_synthesis
+```
 
 
 
