@@ -567,8 +567,8 @@ Inside the openlane container:
 ./flow.tcl -interactive
 package require openlane 0.9
 prep -design picorv32a
-run_synthesis
 ```
+![openlane_invoke](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/9ff5664e-7016-4ff2-982f-162bb77ed0e2)
 
 Synthesis:
 ===========
@@ -594,6 +594,7 @@ To synthesize the code run the following command:
 ```
 run_synthesis
 ```
+![run_synth](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/cbb88756-621d-4081-8b03-722245f44da4)
 
 
 
