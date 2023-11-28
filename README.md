@@ -600,6 +600,36 @@ run_synthesis
 
 ![run_synth_rpt](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/e8cbcbc9-a715-4a3c-acaa-ddbc6185efbc)
 
+**Static Timing Analysis:**
+
+![sta_log](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/b7609cf9-dbed-40b5-ba67-12133c738eec)
+
+Floorpalnning
+============
+
+
+
+Floor Planning: Floor planning in the RTL to GDS2 (GDSII) flow is the initial step of physical design. It involves allocating space and defining the approximate locations of major components and functional blocks on the semiconductor chip. The goal is to create a layout that meets area, power, and performance targets while ensuring that signal routing between these blocks is feasible. Floor planning sets the foundation for subsequent steps like placement and routing and plays a crucial role in achieving a successful chip design.
+
+A. Chip Floor Planning: Purpose: Chip floor planning is the high-level organization of the entire semiconductor chip. It defines the placement of major components and functional blocks on the chip's silicon die. Scope: It encompasses decisions related to core logic placement, I/O ring location, clock distribution, and other global aspects of the chip's physical design. Goals: The primary goals of chip floor planning are to optimize chip area, minimize power consumption, and ensure that the chip meets its performance requirements. It provides a high-level view of how different parts of the chip will interact.
+
+B. Macro Floorplanning: Purpose: Macro floorplanning focuses on the placement and organization of large functional blocks or macros within the chip. These macros can include CPU cores, memory blocks, or other complex IP blocks. Scope: It deals with the internal layout and arrangement of these macros and how they interface with each other and the rest of the chip. Goals: The main objectives of macro floorplanning are efficient use of space, ensuring proper connectivity between macros, and optimizing for performance and power within the macro boundaries.
+
+C. Power Planning: Purpose: Power planning is a critical aspect of chip design that focuses on managing and distributing power throughout the chip. It ensures that each component receives the required power supply and that power delivery is efficient to minimize voltage drop and power dissipation. Scope: Power planning involves decisions about the placement of power grid elements (such as power rails and decoupling capacitors) and the routing of power distribution networks. Goals: The key goals of power planning are to maintain voltage stability, reduce power noise, and meet power delivery requirements, all while minimizing the impact on chip area and performance. Effective power planning is essential for reliable chip operation and to avoid voltage drop-related issues.
+
+Command to run Floorplanning:
+```
+run_floorplan
+```
+
+![run_floorplan](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/1ac8a91f-5fca-4491-ab68-f14c74994f3c)
+
+A **.def** file will have been created in the **results/floorplan** directory following the floorplan run. By looking at the **floorplan.tcl**, we can review floorplan files. 
+To see the layout of the floor, once in the results/floorplan directory, execute the following command to activate magic:
+
+```
+magic -T /home/nsaisampath/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+```
 
 
 
