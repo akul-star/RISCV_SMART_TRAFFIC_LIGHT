@@ -596,6 +596,9 @@ run_synthesis
 ```
 ![run_synth](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/cbb88756-621d-4081-8b03-722245f44da4)
 
+**Synthesis Report:**
+
+![run_synth_rpt](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/e8cbcbc9-a715-4a3c-acaa-ddbc6185efbc)
 
 
 
