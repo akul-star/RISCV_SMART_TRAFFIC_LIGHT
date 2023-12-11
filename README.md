@@ -695,10 +695,10 @@ Routing:
 
 **Routing:** Routing, in the context of semiconductor chip design within the RTL to GDS2 (GDSII) flow, refers to the process of establishing physical connections between different components, such as standard cells, macros, and input/output pads, on the silicon die. These connections are created using metal layers, which serve as interconnects to facilitate data transmission and signal propagation. Grid routers are a type of routing algorithm used in semiconductor chip design within the context of the RTL to GDS2 (GDSII) flow. These routers are designed to navigate and establish connections between components on a chip layout using a grid-based approach. Grid routers are especially suitable for digital integrated circuits with a regular and structured layout, where the chip design is aligned with a grid pattern.
 
-      A. **Global Routing:**  
+      A. Global Routing:  
 Global routing is the initial phase of routing in chip design. It determines high-level routing paths for nets between macroblocks or functional units on the chip, focusing on channel assignments and chip-level optimization. The outcome is a routing framework or guides for subsequent detailed routing.
 
-      B. **Detailed Routing:**
+      B. Detailed Routing:
 Detailed routing follows global routing and defines precise paths for individual wires within nets. It works at a lower, detailed level, considering cell positions, design rules, and minimizing wirelength. The result is the completed layout of physical interconnections, adhering to global routing guidelines.
 
 Run the following command to run the routing:
@@ -735,6 +735,10 @@ Post Routing Reports:
 
 ![DRC_violations](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/5d779e1a-9128-45e1-9c7b-fdfaad1fb29f)
 
+VIDEO Explaination:
+=================
+
+https://drive.google.com/drive/folders/1t8aPpA8Nbcv6xlC-ckFEee0UGjgSLPUv?usp=sharing
 
 # Acknowledgement
 
