@@ -630,6 +630,66 @@ To see the layout of the floor, once in the results/floorplan directory, execute
 ```
 magic -T /home/nsaisampath/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
 ```
+![magic_floorplan](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/baf3dccb-ceee-4a8b-b313-9bb4d8bd1e86)
+
+Placement
+=========
+
+
+**Cell Placement:** Cell placement is a crucial step in the physical design of integrated circuits (ICs) within the RTL to GDS2 (GDSII) flow. It involves determining the specific locations on a semiconductor chip's silicon die where individual standard cells, macros, and other functional blocks will be positioned. 
+
+   A. **Chip Floor Planning:**
+        Purpose: Chip floor planning is the high-level organization of the entire semiconductor chip. It defines the placement of major components and functional blocks on the chip's silicon die.
+        Scope: It encompasses decisions related to core logic placement, I/O ring location, clock distribution, and other global aspects of the chip's physical design.
+        Goals: The primary goals of chip floor planning are to optimize chip area, minimize power consumption, and ensure that the chip meets its performance requirements. It provides a high-level view of how different parts of the chip will interact.
+
+   B. **Macro Floorplanning:**
+        Purpose: Macro floorplanning focuses on the placement and organization of large functional blocks or macros within the chip. These macros can include CPU cores, memory blocks, or other complex IP blocks.
+        Scope: It deals with the internal layout and arrangement of these macros and how they interface with each other and the rest of the chip.
+        Goals: The main objectives of macro floorplanning are efficient use of space, ensuring proper connectivity between macros, and optimizing for performance and power within the macro boundaries.
+
+   C. **Power Planning:**
+        Purpose: Power planning is a critical aspect of chip design that focuses on managing and distributing power throughout the chip. It ensures that each component receives the required power supply and that power delivery is efficient to minimize voltage drop and power dissipation.
+        Scope: Power planning involves decisions about the placement of power grid elements (such as power rails and decoupling capacitors) and the routing of power distribution networks.
+        Goals: The key goals of power planning are to maintain voltage stability, reduce power noise, and meet power delivery requirements, all while minimizing the impact on chip area and performance. Effective power planning is essential for reliable chip operation and to avoid voltage drop-related issues.
+
+- Run the following command to run the placement:
+```
+run_placement
+```
+- To view the placement on Magic from **results/placement**:
+```
+ magic -T ~/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+```
+
+![magic_placement](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/0df3edd3-5218-452e-9769-e476371c4685)
+
+Clock Tree Synthesis:
+=====================
+
+**Clock Tree Sysnthesis:** CTS stands for "Clock Tree Synthesis." It is a crucial step in the physical design of integrated circuits, particularly digital designs, within the RTL to GDS2 (GDSII) flow. The primary goal of CTS is to create an efficient and optimized network of clock distribution paths throughout the chip.
+
+The purpose of building a clock tree is enable the clock input to reach every element and to ensure a zero clock skew. H-tree is a common methodology followed in CTS. Following command is used to run CTS.
+
+```
+run_cts
+```
+- Timing Report
+
+![cts_time_report](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/cf1a2f43-cf9f-4a9a-bfe4-e55a4c3deb83)
+
+- Area Report
+
+![cts_area_report](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/295ff02b-3c3d-44e2-b7e2-6b7e81f68d10)
+
+- Skew Report
+
+![cts_skew_report](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/e56fefc9-d235-495c-bd31-8e69c60d9926)
+
+- Power Report
+
+![cts_Power_report](https://github.com/akul-star/RISCV_SMART_TRAFFIC_LIGHT/assets/75561390/dc2bcc48-d555-4d92-a672-072ce7ec963b)
+
 
 
 
